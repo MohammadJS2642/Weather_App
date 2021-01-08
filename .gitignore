@@ -174,3 +174,6 @@ pip-selfcheck.json
 
 ### local_settings.py ###
 local_settings.py
+
+### .vscode ###
+.vscode
