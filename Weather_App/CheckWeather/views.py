@@ -8,15 +8,26 @@ from Weather_App.local_settings import Api_Key
 
 def ShowWeather(request):
 
-    # this is api url for request to that
-    city = 'tehran'
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={Api_Key}"
+    # for check what method is called
+    if request.method == "GET":
 
-    # get string (json) from url
-    response = requests.get(url)
+        # using from GET
+        cityName = request.GET['cityname']
 
-    # convert that string to json
-    check = response.json()
+        # this is api url for request to that
+        city = cityName
+
+        url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={Api_Key}"
+
+        # get string (json) from url
+        response = requests.get(url)
+
+        # convert that string to json
+        check = response.json()
+
+    # if city not found
+    else:
+        return HttpResponse("City is not true")
 
     # show json like string in html with httpresponse without template
     return HttpResponse(response)
