@@ -1,23 +1,25 @@
 from django.shortcuts import render, redirect
-from django.http import HttpRequest, HttpResponse
+from django.http import HttpResponse
 import requests
-from django.template.loader import render_to_string
+from Weather_App.local_settings import Api_Key
 
 # Create your views here.
 
 
 def ShowWeather(request):
-    api = '35017b640b12e562215df7ca0500d361'
-    city = 'tehran'
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api}"
 
+    # this is api url for request to that
+    city = 'tehran'
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={Api_Key}"
+
+    # get string (json) from url
     response = requests.get(url)
 
+    # convert that string to json
     check = response.json()
-    weather = check[0]
 
-    # context = {'check': check}
+    # show json like string in html with httpresponse without template
+    return HttpResponse(response)
 
-    # return HttpResponse()
-    return render_to_string(weather)
-    # return redirect(check)
+    # display a pice of  from json
+    # return HttpResponse(check['weather'])
