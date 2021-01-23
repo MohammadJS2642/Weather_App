@@ -6,24 +6,18 @@ from Weather_App.local_settings import Api_Key
 # Create your views here.
 
 
-def ShowWeather(request):
+def ShowWeather(request, cityname=''):
 
     # for check what method is called
     if request.method == "GET":
 
-        # using from GET
-        cityName = request.method.get['cityname']
-
-        if cityName == '':
-            return HttpResponse("Not city")
-
         # this is api url for request to that
-        city = cityName
+        city = cityname
 
         url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={Api_Key}"
 
         # get string (json) from url
-        response = request.get(url)
+        response = requests.get(url)
 
         # convert that string to json
         check = response.json()
