@@ -1,23 +1,32 @@
-{%extends '_base.html'%} {%block title%}weather{%endblock%} {%block content%}
-<ul>
-  {%for i in check%}
-  <li>{{i}}</li>
-  {%endfor%}
-</ul>
-{%endblock content%}
+{%extends '_base.html'%} {%block title%}weather{%endblock%}
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <ul>
-      {%for i in check%}
-      <li>{{i}}</li>
-      {%endfor%}
-    </ul>
-  </body>
-</html> -->
+<div>
+  {%block content%}
+
+  <form action="/showweather/" method="get" id="SearchForm">
+    <!-- <label for="fSearch">Searching</label> -->
+    <input
+      type="text"
+      id="fSearch"
+      name="cityname"
+      placeholder="Search"
+      class="fieldSearch"
+    />
+    <input type="submit" value="Search" class="btnSearch" />
+  </form>
+
+  <br />
+
+  <div>
+    <!-- {%for i in weather%}
+    <p>{{i}}</p>
+    {%endfor%} -->
+
+    {{weather}}
+  </div>
+
+  <!-- {%include 'partials/_nothing.html'%} -->
+  <p class="not">{{not}}</p>
+
+  {%endblock%}
+</div>
