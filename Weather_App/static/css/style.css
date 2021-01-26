@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: rgb(21, 168, 158);
+  height: 60px;
+}
+
+.not {
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 50px;
+}
+
+#SearchForm {
+  margin-top: 2rem;
+  margin-left: 14rem;
+}
+
+.btnSearch {
+  height: 4rem;
+  border-radius: 10px;
+  background-color: rgb(21, 168, 158);
+  color: black;
+  font-weight: 300;
+  font-family: fantasy;
+  font-size: 1.3rem;
+  width: 8rem;
+  border: none;
+}
+
+.fieldSearch {
+  height: 4rem;
+  border-radius: 10px;
+  width: 14rem;
+}
