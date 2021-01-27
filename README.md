@@ -7,6 +7,7 @@ for create a virtual enviroment:
 1. *python -m virtualenv *some_name* (venv)*
 2. in (**windows powershell**) you should use (_source venv/script/active.ps1_) code for active virtualenv.
 3. after that with (_pip install ..._) install requirements in you'r virtualenv
+4. if you wnat to use my requirements.txt use this code: (_pip install -r requirements.txt_)
 
 ---
 
