@@ -54,7 +54,7 @@ def ShowWeather(request, cityname=''):
         # return HttpResponse(response)
         # --------------If everything is ok remove this--------------
     except Exception as e:
-        return render(request, 'checkweather/index.html',e)
+        return render(request, 'checkweather/index.html', e)
 
 
 def ShowWeather2(request, cityname=''):
