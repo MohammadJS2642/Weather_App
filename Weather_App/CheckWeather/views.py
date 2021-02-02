@@ -12,7 +12,7 @@ def ShowWeather(request, cityname=''):
         if request.method == "GET":
             query = request.GET.get('cityname')
             # this is api url for request to that
-            city = cityname
+            # city = cityname
 
             url = f"http://api.openweathermap.org/data/2.5/weather?q={query}&appid={Api_Key}"
 
