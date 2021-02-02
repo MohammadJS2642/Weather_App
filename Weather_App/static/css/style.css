@@ -3,9 +3,15 @@
   margin: 0;
 }
 
+/* HEADER */
 header {
+  grid-area: header;
   background-color: rgb(21, 168, 158);
   height: 60px;
+  display: grid;
+  width: 100%;
+
+  grid-template: auto / 1fr;
 }
 
 .headerTitle {
@@ -15,19 +21,48 @@ header {
   /* top: 0.2rem; */
   font-size: 3rem;
 }
+/* HEADER */
+
+/* MAIN */
+main {
+  position: absolute;
+  grid-area: main;
+  height: 82%;
+  width: 100%;
+  display: grid;
+  /* background-color: blue; */
+  justify-content: center;
+  align-content: center;
+  grid-template: 1fr 3fr /1fr;
+}
+
+.show_weather {
+  font-size: 3rem;
+  justify-self: center;
+  align-self: center;
+}
 
 .not {
   margin-top: 0.5rem;
   text-align: center;
   font-size: 50px;
+  justify-self: center;
+  align-self: center;
 }
 
 #SearchForm {
-  margin-top: 2rem;
-  margin-left: 14rem;
+  /* margin-top: 2rem;
+margin-left: 14rem; */
+  /* position: relative; */
+  width: 50%;
+  justify-self: center;
+  align-self: center;
 }
 
 .btnSearch {
+  /* position: absolute; */
+  left: 57%;
+  width: 23%;
   height: 4rem;
   border-radius: 10px;
   background-color: rgb(21, 168, 158);
@@ -40,7 +75,43 @@ header {
 }
 
 .fieldSearch {
+  /* position: absolute; */
+  width: 30%;
   height: 4rem;
   border-radius: 10px;
   width: 14rem;
 }
+
+.main_background {
+  font-family: cursive;
+  font-size: 1.1rem;
+  font-weight: 800;
+  /* color: rgba(255, 255, 255, 0.78); */
+  background-color: rgba(255, 255, 255, 0.78);
+  /* width: 300px; */
+  /* height: 10%; */
+  color: black;
+  justify-self: center;
+  align-self: center;
+}
+/* MAIN */
+
+/* FOOTER */
+footer {
+  grid-area: footer;
+  display: grid;
+  position: absolute;
+  bottom: 0px;
+  height: 50px;
+  width: 100%;
+  background-color: rgb(21, 168, 158);
+  grid-template: 1fr/1fr;
+}
+#copyright {
+  font-family: cursive;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.78);
+  justify-self: center;
+  align-self: center;
+}
+/* FOOTER */
