@@ -7,30 +7,27 @@
 <!-- end name for header -->
 
 <!--  -->
-<div>
-  {%block content%}
 
-  <form action="/showweather/" method="get" id="SearchForm">
-    <!-- <label for="fSearch">Searching</label> -->
-    <input
-      type="text"
-      id="fSearch"
-      name="cityname"
-      placeholder="Search"
-      class="fieldSearch"
-    />
-    <input type="submit" value="Search" class="btnSearch" />
-  </form>
+{%block content%}
 
-  <br />
+<form action="/showweather/" method="get" id="SearchForm">
+  <!-- <label for="fSearch">Searching</label> -->
+  <input
+    type="text"
+    id="fSearch"
+    name="cityname"
+    placeholder="Search"
+    class="fieldSearch"
+  />
+  <input type="submit" value="Search" class="btnSearch" />
+</form>
 
-  <div>
-    <!-- {%for i in weather%}
+<div class="main_background">
+  <!-- {%for i in weather%}
     <p>{{i}}</p>
     {%endfor%} -->
 
-    {{weather}}
-  </div>
+  {{weather}}
 
   <!-- {%include 'partials/_nothing.html'%} -->
   <p class="not">{{not}}</p>
