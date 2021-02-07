@@ -57,7 +57,7 @@ def ShowWeather(request, cityname=''):
 
                 # temp in main
                 temp_kelvin = main['temp']
-                temp = round((temp_kelvin-273.15),1)
+                temp = round((temp_kelvin-273.15), 1)
 
                 # speed wind
                 speed_wind = wind['speed']
@@ -108,31 +108,31 @@ def ShowWeather2(request, cityname=''):
         return HttpResponse("City is not true")
 
     # search inside weather arrey
-    weather_list = check['weather'][0]
+    # weather_list = check['weather'][0]
 
     # searching inside main dictionary
-    main = check['main']
+    # main = check['main']
 
     # find main in weather status
-    status = weather_list['main']
+    # status = weather_list['main']
 
     # find weather description
-    description = weather_list['description']
+    # description = weather_list['description']
 
     # Weather Icon
-    weather_icon = weather_list['icon']
+    # weather_icon = weather_list['icon']
 
     # temp in main
-    temp = main['temp']
+    # temp = main['temp']
 
     # wind
-    wind = check['wind']
+    # wind = check['wind']
 
     # speed wind
-    speed_wind = wind['speed']
+    # speed_wind = wind['speed']
 
     # degree wind
-    degree_wind = wind['deg']
+    # degree_wind = wind['deg']
 
     # show json like string in html with httpresponse without template
     return HttpResponse(response)
