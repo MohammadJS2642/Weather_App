@@ -10,6 +10,7 @@ from rest_framework.views import APIView
 # -----------------------
 
 # OTHER
+# TODO: find way for use generics instead class base
 # from rest_framework.generics import ListAPIView
 # -----------------------
 
@@ -22,6 +23,7 @@ from Weather_App.local_settings import Api_Key
 # Create your views here.
 
 
+# for now i use this class base apis
 class ClassApi(APIView):
     '''
     this is a classBase api for get data from 
@@ -40,6 +42,7 @@ class ClassApi(APIView):
 
 @api_view(['GET'])
 def sendAsk(request, cityname=''):
+    # i don't use this function base
     '''
         return json response from app 
         function base

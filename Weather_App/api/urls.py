@@ -3,6 +3,6 @@ from .views import sendAsk, ClassApi
 
 app_name = "api"
 urlpatterns = [
-    path('<cityname>/', sendAsk, name='send_ask'),
-    path('class/<cityname>/', ClassApi.as_view(), name='ClassApi'),
+    # path('<cityname>/', sendAsk, name='send_ask'),
+    path('v1/<cityname>/', ClassApi.as_view(), name='ClassApi'),
 ]
